@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="col.css">
+<head>
+    <title>Vaccination</title>
+</head>
+<h1>Vaccination</h1>
+<div class="contact-us">
+  <form action="insert.php" method="POST">
+    <label for="patientName">NAME <em>&#x2a;</em></label>
+      <input id="patientName" name="patientName" required="" type="text" />
+      
+      <label for="aadharNumber">Aadhar Number</label>
+      <input id="aadharNumber" name="aadharNumber" type="num" maxlength="6"  pattern="^[0-9]{6}$" required="" />
+
+      
+      <label for="patientGender">Select Gender <em>&#x2a;</em></label>
+      <div class="container" style="width:300px;">
+        <select name="patientGender">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Others">Others</option>
+        </select>
+      </div>
+
+      <label for="vcenter">Vaccination Center:</label><link rel="stylesheet" href="button.css"> 
+      <div class="container" style="width:300px;">
+        <select name="vcenter">
+          <option value="Hyd">Hyd</option>
+          <option value="Vizag">Vizag</option>
+          <option value="Vizaywada">Vizaywada</option>
+        </select>
+      </div>
+
+
+      <label for="Occupation">Occupation: </label><link rel="stylesheet" href="but.css">
+      <div class="container" style="width:300px;">
+        <select name="Occupation">
+          <option value="Health Care Workers">Health Care Workers</option>
+          <option value="Frontline Workers">Frontline Workers</option>
+          <option value="Other essential Workers">Other essential Workers</option>
+        </select>
+      </div>
+
+    <label for="patientEmail">EMAIL <em>&#x2a;</em></label>
+      <input id="patientEmail" name="patientEmail" required="" type="email" />
+
+
+    <label for="patientPhone"> </label> PHONE</label>
+      <input id="patientPhone" name="patientPhone" type="num" />
+      
+    <label for="patientAge"></label>Age</label>
+      <input id="patientAge" name="patientAge" type="num" required="" />
+
+    
+    
+    <label for="techno">Underlying Health Conditions: </label><link rel="stylesheet" href="button.css">
+    <label class="container">Pregnancy<input type="checkbox" name="techno[]" value="Pregnancy"><span class="checkmark"></span></label>
+    <label class="container">Diabetes<input type="checkbox" name="techno[]" value="Diabetes"><span class="checkmark"></span></label>
+    <label class="container">Hypertension<input type="checkbox" name="techno[]" value="Hypertension"><span class="checkmark"></span></label>
+    <label class="container">Chronic lung diseases<input type="checkbox" name="techno[]" value="Chronic lung diseases"><span class="checkmark"></span></label>
+    <label class="container">Chronic Kidney diseases<input type="checkbox" name="techno[]" value="Chronic Kidney diseases"><span class="checkmark"></span></label>
+    <label class="container">Chronic Liver diseases<input type="checkbox" name="techno[]" value="Chronic Liver diseases"><span class="checkmark"></span></label>
+    <label class="container">Malignancy<input type="checkbox" name="techno[]" value="Malignancy"><span class="checkmark"></span></label>
+    <label class="container">Asthma<input type="checkbox" name="techno[]" value="Asthma"><span class="checkmark"></span></label>
+    <label class="container">CVI(Heart strokes)<input type="checkbox" name="techno[]" value="CVI(Heart strokes)"><span class="checkmark"></span></label>
+    <label class="container">Myocardial Infraction(Heart Attack)<input type="checkbox" name="techno[]" value="Myocardial Infraction(Heart Attack)"><span class="checkmark"></span></label>
+    <label class="container">Hyperthyroidism/Hypothyroidism<input type="checkbox" name="techno[]" value="Hyperthyroidism/Hypothyroidism"><span class="checkmark"></span></label>
+    <label class="container">Auto Immune diseases(SLE and RE)<input type="checkbox" name="techno[]" value="Auto Immune diseases(SLE and RE)"><span class="checkmark"></span></label>
+    <label class="container">None<input type="checkbox" name="techno[]" value="None"><span class="checkmark"></span></label>
+    <h3>
+      Please provide all the information about your issue you can.
+    </h3>
+    <button id="patientOrder">SUBMIT</button>
+  </form>

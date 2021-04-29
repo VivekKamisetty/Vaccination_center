@@ -54,7 +54,7 @@ VALUES ('$x', '$y', '$z', '$a', '$b', '$c', $d, $e, '$chk', $g, $h)";
 
 if ($conn->query($sql) == TRUE)
 {
-    echo "New record created successfully";
+    echo "New record inserted succesfully";
 }
 
 else

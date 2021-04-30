@@ -1,7 +1,7 @@
 <?php
  
-$x=$_POST["u"];
-$y=$_POST["p"];
+$x=$_POST["username"];
+$y=$_POST["password"];
  
 $x = stripslashes($x);
 $y = stripslashes($y);
@@ -20,14 +20,13 @@ if (mysqli_connect_error())
  die("Connection Failed:" . $conn->connect_error);
  }
  
-$user_validation = "SELECT * FROM provider WHERE p_uname = '$x' && p_password = '$y'";
+$user_validation = "SELECT * FROM center WHERE center_uname = '$x' && center_pwd = '$y'";
 $results = mysqli_query($conn, $user_validation);
 $user = mysqli_fetch_assoc($results);
 //echo mysqli_num_rows($results);
  
 if(mysqli_num_rows($results) == 1){
- //echo "loged in sucess fully";
- include("provider1.html");
+ echo "loged in sucess fully";
  
 }else{
  echo "incorrect passcode";

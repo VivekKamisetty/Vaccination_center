@@ -41,13 +41,84 @@ if($user['aadhar']===$y) //aadhar verfication
 $v=0;
 $checkbox1=$_POST['techno'];
 $chk="";
+//foreach($checkbox1 as $chk1)
+//   {
+//      $chk .= $chk1.", ";
+//   }
+
 foreach($checkbox1 as $chk1)
-   {
-      $chk .= $chk1.", ";
+ {
+ 
+switch ($chk1) {
+ case "Pregnancy":
+ $v=$v+0.5;
+ break;
+ case "Diabetes":
+ $v=$v+1;
+ break;
+ case "Hypertension":
+ $v=$v+0.5;
+ break;
+ case "Chronic lung diseases":
+ $v=$v+1;
+ break;
+ case "Chronic Kidney diseases":
+ $v=$v+1;
+ break;
+ case "Chronic Liver diseases":
+ $v=$v+1;
+ break;
+ case "Malignancy":
+ $v=$v+1;
+ break;
+ case "Asthma":
+ $v=$v+1;
+ break;
+ case "CVI(Heart strokes)":
+ $v=$v+1;
+ break;
+ case "Myocardial Infraction(Heart Attack)":
+ $v=$v+1;
+ break;
+ case "Hyperthyroidism/Hypothyroidism":
+ $v=$v+1;
+ break;
+ case "Auto Immune diseases(SLE and RE)":
+ $v=$v+0.5;
+ break;
+ default:
+ $v=$v+0;
+ 
+}
+ 
+ $chk .= $chk1.", ";
+ }
+
+ if($e>=55){ //increasing value acc to age
+    $v=$v+2;
+   }else if($e >=45){
+    $v=$v+1;
+   }else{
+    $v+$v+0.5;
+   }
+    
+   switch($b){ //increasing value acc to occupation
+    case "Health Care Workers" :
+    $v=$v+3;
+    break;
+    case "Frontline Workers" :
+    $v=$v+2;
+    break;
+    case "Other essential Workers" :
+    $v=$v+1;
+    break;
+    default :
+    $v=$v+0;
+    
    }
  
 
-$g = 0;
+$g = $v;
 $h = 0;
 $sql = "INSERT INTO register (name, aadhar, gender, center, occupation, email, phone, age, medical_cond, score, status)
 VALUES ('$x', '$y', '$z', '$a', '$b', '$c', $d, $e, '$chk', $g, $h)";

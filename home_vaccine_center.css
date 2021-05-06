@@ -19,24 +19,25 @@ body {
 }
 button { 
        background-color: #4CAF50; 
-       width: 26%;
-        color: orange; 
-        padding: 10px; 
-        margin: 10px 0px; 
-        border: none; 
-        cursor: pointer; 
+       width: 5vw;
+       height: 7vh;
+       color: orange; 
+       padding: 5px; 
+       margin: 15px 0px; 
+       border: none; 
+       cursor: pointer; 
          } 
         
 button[type=chk]{ 
 background-color: rgb(199, 62, 21); 
 width: 5vw;
 height: 7vh;
-align-items: top;
 color: orange; 
 padding: 5px; 
 margin: 15px 0px; 
 border: none; 
-cursor: pointer; 
+cursor: pointer;
+position:absolute; top:0; right:10;
    }
 
 input[type=password] { 

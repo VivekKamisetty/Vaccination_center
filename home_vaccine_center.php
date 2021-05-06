@@ -96,12 +96,10 @@ input[type=submit]:hover {
 <br>
 
 
-<form action="check_specific.php" method="POST">
+<form action="verify.php" method="POST">
     <p>Check Specific Person Status: </p>
     <label>Enter Aadhar</label>
-    <input type="num" id="aadhar" name="f" placeholder="Aadhar Number">
-    <label>Enter Name</label>
-    <input type="text" id="name" name="g" placeholder="Enter Name" >
+    <input type="num" id="aadhar" name="aadhar" placeholder="Aadhar Number">
     <button type="submit" class="btn btn-primary btn-block btn-large">Submit</button>
     </form>
 
